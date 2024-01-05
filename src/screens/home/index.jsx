@@ -10,6 +10,7 @@ import AvailableBrands from "../../components/home/AvailableBrands";
 import SafeAreaContainer from "../../ui/SafeAreaContainer";
 import { colors } from "../../utils/constants";
 import TrendingRides from "../../components/home/TrendingRides";
+import RecentRides from "../../components/home/RecentRides";
 
 export default function HomeScreen() {
   const [openSearchModal, setOpenSearchModal] = useState(false);
@@ -51,9 +52,9 @@ export default function HomeScreen() {
           onPress={() => setOpenSearchModal(true)}
           className="w-[90%]"
         >
-          <View className="w-full flex flex-row items-center space-x-2 border px-4 py-2 rounded-lg border-[#777777]">
+          <View className="w-full flex flex-row items-center space-x-2 border px-4 py-2 rounded-xl border-[#777777]">
             <MagnifyingGlassIcon color={colors.primary} size={20} />
-            <Text>Search</Text>
+            <Text className={`font-["Poppins-Regular"]`}>Search</Text>
           </View>
         </TouchableOpacity>
         <View className="w-[10%] flex flex-row justify-center items-center bg-primary rounded px-2 py-1">
@@ -65,7 +66,9 @@ export default function HomeScreen() {
 
       {/* FlatList of Car Models */}
       <AvailableBrands />
-      <TrendingRides />
+      <RecentRides/>
+
+      {/* Modals */}
       <>
         {/* Search Modal */}
         <Modal

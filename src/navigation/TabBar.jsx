@@ -4,7 +4,7 @@ import {
   UserIcon as UserIconSolid,
   HomeIcon as HomeIconSolid,
   MagnifyingGlassIcon as MagnifyingGlassIconSolid,
-} from "react-native-heroicons/solid";
+} from "react-native-heroicons/mini";
 import { TabStyles } from "../styles/tabBar.styles";
 import { colors } from "../utils/constants";
 
@@ -61,22 +61,22 @@ export function TabBar({ state, descriptors, navigation }) {
             switch (label) {
               case "home":
                   return <HomeIconSolid
-                    size={35}
+                    size={30}
                     color={isFocused ? colors.primary : colors.gray}
                   />
               case "search":
                   return <MagnifyingGlassIconSolid
-                    size={35}
+                    size={30}
                     color={isFocused ? colors.primary : colors.gray}
                   />
               case "orders":
                   return <BookmarkIconSolid
-                    size={35}
+                    size={30}
                     color={isFocused ? colors.primary : colors.gray}
                   />
               case "user":
                   return <UserIconSolid
-                    size={35}
+                    size={30}
                     color={isFocused ? colors.primary : colors.gray}
                   />
             }
