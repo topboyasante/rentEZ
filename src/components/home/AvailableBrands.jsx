@@ -16,7 +16,7 @@ export default function AvailableBrands() {
         <FlatList
           data={models}
           renderItem={({ item }) => (
-            <View className="bg-primary px-4 py-2 rounded-lg">
+            <View className="bg-[#009456] px-4 py-2 rounded-lg">
               <Text className={`text-white font-["Poppins-SemiBold"]`}>{item.name}</Text>
             </View>
           )}

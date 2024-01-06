@@ -57,7 +57,7 @@ export default function HomeScreen() {
             <Text className={`font-["Poppins-Regular"]`}>Search</Text>
           </View>
         </TouchableOpacity>
-        <View className="w-[10%] flex flex-row justify-center items-center bg-primary rounded px-2 py-1">
+        <View className="w-[10%] flex flex-row justify-center items-center bg-[#009456] rounded px-2 py-1">
           <TouchableOpacity onPress={() => setOpenFilterModal(true)}>
             <AdjustmentsVerticalIcon color={"white"} size={30} />
           </TouchableOpacity>
@@ -98,6 +98,7 @@ export default function HomeScreen() {
           visible={openFilterModal}
           onRequestClose={() => setOpenFilterModal(false)}
           animationType="slide"
+          presentationStyle="pageSheet"
         >
           <SafeAreaContainer>
             <View>
